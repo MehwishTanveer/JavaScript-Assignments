@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert 6</title>
+    <style>
+        table{
+            background-color: #D3D3D3;
+			margin: 5px auto;
+        }
+        h1{
+            background-color:#9CC559;
+            color: #fff;
+            margin: 0px;
+        }
+        .green{
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+	<script>
+		alert("Register Youself!");
+	</script>
+</head>
+<body>
+    <body>
+		<form>
+		<table width="500">
+            <tr>
+                <td colspan="2"><h1>User Registration Form</h1></td>
+            </tr>
+			<tr>
+				<td>User Name:</td> <td><input type="text" name="username"/> </td>
+			</tr>
+
+		<tr>
+			<td>Password:</td> <td><input type="password" name="password"/> </td>
+		</tr>
+	
+		<tr>
+			<td>Date of Birth:</td> <td><input type="date" value="dob"/> </td>
+		</tr>
+
+		<tr>
+			<td>Web URL:</td> <td><input type="url" name="website"/> </td>
+		</tr>
+
+		<tr>
+		<td>Address:</td> <td><input type="text" name="address"/> </td>
+		</tr>
+
+		<tr>
+		<td>City:</td> <td><select name="city"> 
+		<option value="karachi">Karachi</option>
+		<option value="Lahore">Lahore</option>
+		<option value="hyderabad">Hyderabad</option>
+		</select></td>
+		</tr>
+
+		<tr>
+		<td>State:</td> <td><input type="text" name="state"/> </td>
+		</tr>
+
+		
+		<tr>
+		<td>Zip:</td> <td><input type="text" name="zip"/> </td>
+		</tr>
+
+		<tr>
+		<td>Magzines:</td> <td><select name="magzines" size="4" multiple="multiple">Newsweek
+			<option value="Newsweek">Newsweek</option>
+			<option value="time">Time</option>
+			<option value="fortune">Fortune</option>
+			<option value="Tv guide">TV Guide</option>
+			</select></td>
+		</tr>
+        <tr>
+            <td>Additional Comments</td><br>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"><textarea name="comments" id="" cols="60" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td>Upload your profile picture:</td><td><input type="file" name="picture"></td>
+        </tr>
+        <tr>
+           <td></td> <td><input type="submit" value="Upload" class="green"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Send Your Order" class="green"></td>
+        </tr>
+</body>
+</html>
