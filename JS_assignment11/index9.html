@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event</title>
+</head>
+<style>
+    fieldset{
+        width: 300px;
+    }
+    table{
+        border-collapse: collapse;
+        min-width: 500px;
+    }
+    td{
+        background-color: #fff;
+        padding: 10px;
+        border: 2px solid #000000;
+    }
+    th{
+        background-color: #0088dd;
+        color: white;
+        padding: 10px;
+        border: 2px solid #000000;
+    }
+</style>
+<body>
+        <fieldset>
+            <legend>     Add Student    </legend>
+            <label>     
+                Student Name: <br /> <input id="name" type="text" size="30" maxlength="100" onfocus="this.style.backgroundColor='lightblue'" onblur="this.style.backgroundColor='white'">    
+            </label>    <br />    
+            <label>     
+                Roll no.: <br /> <input id="rollno" type="text" size="30" maxlength="100" onfocus="this.style.backgroundColor='lightblue'" onblur="this.style.backgroundColor='white'">    
+            </label>    <br />  
+            <label>     
+                Email ID: <br /> <input id="email" type="email" size="30" maxlength="100" onfocus="this.style.backgroundColor='lightblue'" onblur="this.style.backgroundColor='white'">    
+            </label>    <br />
+            <label>
+                Course: <br />
+            </label>
+            <select name="referrer" id="course">      
+                <option value="MCC-Module A">MCC-Module A</option>      
+                <option value="MCC-Module B">MCC-Module B</option>           
+            </select>    <br /><br />
+            <button onclick="formSubmit()">Save</button>     
+        </fieldset>
+        
+    <br>
+    <br>
+    <br>
+    <table id="studentInfo">
+        <tr>
+            <th colspan="4">Students Information</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Course</th>
+        </tr>
+    </table>
+
+    <script>
+        function formSubmit() {
+            if (document.getElementById("name").value === "" || document.getElementById("rollno").value === "" || document.getElementById("email").value === "")
+                alert("Please fill out all fields")
+            else {
+                // collect field values
+                var name= document.getElementById("name").value;
+                var rollno= document.getElementById("rollno").value;
+                var email= document.getElementById("email").value;
+                var course= document.getElementById("course").value;
+                // clear fields
+                document.getElementById("name").value = "";
+                document.getElementById("rollno").value = "";
+                document.getElementById("email").value = "";
+                // table output
+                var row = "<tr><td>"+name+"</td><td>"+rollno+"</td><td>"+email+"</td><td>"+course+"</td></tr>"
+                document.getElementById("studentInfo").innerHTML += row;
+            }           
+        }
+
+        /* Form Validation on all fields */
+       /* function formSubmit() {
+            if (document.getElementById("name").value === "")
+                alert("Your name required.");
+            else
+                var name= document.getElementById("name").value;
+
+            if (document.getElementById("rollno").value === "")
+                alert("Roll number required.");
+            else
+                var rollno= document.getElementById("rollno").value;
+
+            if (document.getElementById("email").value === "")
+                alert("Email address required.");
+            else
+                var email= document.getElementById("email").value;
+
+            if (document.getElementById("course").value === "") 
+                alert("Course selection required.");
+            else
+                var course= document.getElementById("course").value;
+            
+        }*/
+    </script>
+</body>
+</html>

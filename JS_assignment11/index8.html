@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event</title>
+</head>
+<body>
+    <div style="border-top: 2px solid #aaa; border-bottom: 2px solid #aaa; padding: 5px;">
+        <img src="movie.jpg" height="220px" width="300px" align="left">
+        <h4>Audio & Video</h4>
+        <h1>Movie Directors Vs. Producers: What’s the Difference?</h1>
+        <h5> POSTED 02/19/2015 | 2 minutes ago</h5>
+        <p id="difference" style="padding: 10px">When the winner for Best Picture is announced, who goes up to accept the Oscar — the film’s producer or director? It’s the producer. For instance, if “Selma” wins Best Picture Sunday, director Ava DuVernay won’t accept the award. The producers of the film — Oprah Winfrey and others —... <a href="javascript:void(0);" onClick="expandPara();"><em>Read More</em></a></p>
+    </div>
+</body>
+<script>
+    function expandPara() {
+        var expandedPara = "When the winner for Best Picture is announced, who goes up to accept the Oscar — the film's producer or director? It's the producer. For instance, if 'Selma' wins Best Picture Sunday, director Ava DuVernay won't accept the award. The producers of the film — Oprah Winfrey and others — will go home with the coveted gold statuette. \nThe Academy Awards have presented the category this way since 1929. Some people who love cinema might ask: Isn't the director ultimately responsible for making a film? And there we find the crux of this article: What's the difference between film directors and film producers? Erika Olson writes that directors are on set each day and are in charge of the overall artistic vision of the movie, whereas producers take care of business and logistics. When you dive deeper, it's more complicated than that."
+        document.getElementById("difference").innerHTML = expandedPara;
+    } 
+</script>
+</html>
